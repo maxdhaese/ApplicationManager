@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <title>Application Manager</title>
+</head>
+<body>
+<div align="center">
+
+    <h1>Application List</h1>
+    <a href="/new">Create New Application</a>
+    <br/><br/>
+    <table border="1" cellpadding="10">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Date</th>
+            <th>Job</th>
+            <th>Company</th>
+            <th>Location</th>
+            <th>Solicited Through</th>
+            <th>Link</th>
+            <th>Comments</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="app : ${listApplications}">
+            <td th:text="${app.id}">ID</td>
+            <td th:text="${app.date}">Date</td>
+            <td th:text="${app.job}">Job</td>
+            <td th:text="${app.company}">Company</td>
+            <td th:text="${app.location}">Location</td>
+            <td th:text="${app.solicited_through}">Solicited through</td>
+            <td th:text="${app.link}">Link</td>
+            <td th:text="${app.comments}">Comments</td>
+            <td>
+                <a th:href="@{'/edit/' + ${app.id}}">Edit</a>
+                &nbsp;&nbsp;&nbsp;
+                <a th:href="@{'/delete/' + ${app.id}}">Delete</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

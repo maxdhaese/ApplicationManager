@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8" />
+    <title>Create New Application</title>
+</head>
+<body>
+<div align="center">
+    <h1>Create New Application</h1>
+    <br />
+    <form action="#" th:action="@{/save}" th:object="${newApplication}"
+          method="post">
+
+        <table border="0" cellpadding="10">
+            <tr>
+                <td>Date:</td>
+                <td><input type="text" th:field="*{date}" /></td>
+            </tr>
+            <tr>
+                <td>Job:</td>
+                <td><input type="text" th:field="*{job}" /></td>
+            </tr>
+            <tr>
+                <td>Company:</td>
+                <td><input type="text" th:field="*{company}" /></td>
+            </tr>
+            <tr>
+                <td>Location:</td>
+                <td><input type="text" th:field="*{location}" /></td>
+            </tr>
+            <tr>
+                <td>Solicited through:</td>
+                <td><input type="text" th:field="*{solicited_through}" /></td>
+            </tr>
+            <tr>
+                <td>Link:</td>
+                <td><input type="url" th:field="*{link}" /></td>
+            </tr>
+            <tr>
+                <td>Comments:</td>
+                <td><input type="text" th:field="*{comments}" /></td>
+            </tr>
+
+            <tr>
+                <td colspan="2"><button type="submit">Save</button> </td>
+            </tr>
+        </table>
+    </form>
+</div>
+</body>
+</html>
