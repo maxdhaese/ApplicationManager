@@ -1,4 +1,4 @@
-package be.intecbrussel.applicationmanager.model;
+package be.intecbrussel.applicationmanager.App;
 
 import org.springframework.beans.factory.annotation.Autowired;
 

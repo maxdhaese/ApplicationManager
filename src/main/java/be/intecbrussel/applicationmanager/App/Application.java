@@ -1,4 +1,4 @@
-package be.intecbrussel.applicationmanager.model;
+package be.intecbrussel.applicationmanager.App;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

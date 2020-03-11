@@ -1,5 +1,7 @@
-package be.intecbrussel.applicationmanager.model;
+package be.intecbrussel.applicationmanager.App;
 
+import be.intecbrussel.applicationmanager.App.Application;
+import be.intecbrussel.applicationmanager.App.ApplicationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
